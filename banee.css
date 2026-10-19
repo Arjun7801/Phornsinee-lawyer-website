@@ -9,7 +9,7 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     color: #333333;
-    background-color: #f0f5ff;
+    background-color: #FFFFFF;
 }
 
 /* Header */
@@ -20,7 +20,7 @@ body {
     align-items: center;
     min-height: 80px;
     padding: 20px 40px;
-    background-color: transparent;
+    background-color: #FFFFFF;
 }
 
 /* Name in the center of the header */
@@ -29,9 +29,20 @@ body {
     left: 50%;
     transform: translateX(-50%);
     margin: 0;
-    color: ##000080;
+    color: #142B4A;
     font-size: 26px;
     text-align: center;
+}
+
+/* Gold accent line below the name */
+.name::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    margin: 10px auto 0;
+    background-color: #B89B5E;
+    border-radius: 2px;
 }
 
 /* Introduction and services side by side */
@@ -50,6 +61,7 @@ body {
     text-align: left;
     font-size: 18px;
     line-height: 1.8;
+    color: #333333;
 }
 
 /* Legal services on the right */
@@ -58,6 +70,7 @@ body {
     padding-top: 10px;
     font-size: 20px;
     line-height: 2;
+    color: #142B4A;
 }
 
 .services ul {
@@ -65,20 +78,47 @@ body {
     padding-left: 25px;
 }
 
+/* Gold bullet points */
+.services li::marker {
+    color: #B89B5E;
+}
+
 /* Contact section */
 .contact-section {
     padding: 40px;
-    background-color: #f5f5f5;
+    background-color: #F4F6F9;
     text-align: center;
+    border-top: 1px solid #E3E7ED;
 }
 
 .contact-section h2 {
     margin-top: 0;
-    color: #222222;
+    color: #142B4A;
+}
+
+/* Gold accent under contact heading */
+.contact-section h2::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 3px;
+    margin: 12px auto;
+    background-color: #B89B5E;
+    border-radius: 2px;
 }
 
 .contact-section p {
     line-height: 1.6;
+}
+
+.contact-section a {
+    color: #142B4A;
+    text-decoration-color: #B89B5E;
+    text-underline-offset: 4px;
+}
+
+.contact-section a:hover {
+    color: #8A713B;
 }
 
 /* Footer */
@@ -86,7 +126,8 @@ body {
     padding: 25px 20px;
     text-align: center;
     font-size: 14px;
-    color: #666666;
+    color: #FFFFFF;
+    background-color: #142B4A;
 }
 
 /* Social media links */
@@ -120,22 +161,22 @@ body {
     right: 20px;
     bottom: 20px;
     z-index: 1000;
-
     display: inline-block;
-    background-color: #0eed1d;
-    color: #ffffff;
+    background-color: #142B4A;
+    color: #FFFFFF;
     text-decoration: none;
-
     padding: 12px 18px;
+    border: 1px solid #B89B5E;
     border-radius: 6px;
     font-size: 16px;
-
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 8px rgba(20, 43, 74, 0.2);
+    transition: background-color 0.3s ease,
+                color 0.3s ease;
 }
 
 .back-to-top:hover {
-    background-color: #f7950c;
+    background-color: #B89B5E;
+    color: #142B4A;
 }
 
 /* Smooth scrolling */
@@ -157,6 +198,11 @@ html {
         font-size: 17px;
         text-align: center;
         overflow-wrap: anywhere;
+    }
+
+    .name::after {
+        width: 45px;
+        margin-top: 7px;
     }
 
     .content {
